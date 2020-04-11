@@ -4,7 +4,6 @@ Work in progress.
 
 ### TODO:
 
-- add googletest/gtest
 - add toolchains
 - clang tidy
 - vendor cmake file
