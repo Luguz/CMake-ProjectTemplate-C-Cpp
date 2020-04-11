@@ -23,10 +23,10 @@ SET(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake)
 #INCLUDE(${CMAKE_MODULE_PATH}/module_clang_tidy.cmake)
 
 # ============== EXTERNAL/VENDOR SOURCES ===============================================================================
-# Targets:
-#   - gtest, gtest_main           (IF -DBUILD_TESTS=ON)
+INCLUDE(${CMAKE_MODULE_PATH}/func_fetch.cmake)    # FetchDependency(name, git_url, git_tag)
+INCLUDE(FetchContent)
 
-#ADD_SUBDIRECTORY(vendor)
+FetchDependency(googletest https://github.com/google/googletest.git release-1.10.0)
 
 # ============== PROJECT TARGETS =======================================================================================
 

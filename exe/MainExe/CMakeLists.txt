@@ -23,7 +23,6 @@ TARGET_LINK_LIBRARIES(
 #
 #
 
-IF(0)
 IF(BUILD_TESTS)
     ENABLE_TESTING()
 
@@ -31,19 +30,18 @@ IF(BUILD_TESTS)
     FILE(GLOB_RECURSE SOURCES_TARGET_MainExe LIST_DIRECTORIES true test/*.hpp test/*.cpp)
 
     ADD_EXECUTABLE(
-            MainExeTestsExe
+            MainExeTest
 
             test/main_test.cpp
     )
 
     TARGET_LINK_LIBRARIES(
-            MainExeTestsExe
+            MainExeTest
 
             PRIVATE
-            #gtest_main
-            #gtest
+            gtest_main
+            gtest
     )
 
     ADD_TEST(NAME MainExeTests COMMAND MainExeTestsExe)
 ENDIF(BUILD_TESTS)
-ENDIF()
