@@ -5,15 +5,13 @@
 
 class SomeImportantClass {
 
-    std::string m_toPrint;
+    std::string toPrint;
 
 public:
 
     explicit SomeImportantClass(std::string& printMe);
-    ~SomeImportantClass() = default;
 
     void print();
-
 };
 
 
